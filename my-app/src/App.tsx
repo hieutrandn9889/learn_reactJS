@@ -3,6 +3,10 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const handlelog = () => {
+    console.log(5);
+    
+  }
   return (
     <div className="App">
       <header className="App-header">
@@ -18,6 +22,7 @@ function App() {
         >
           Learn React
         </a>
+        <button onClick={handlelog}></button>
       </header>
     </div>
   );
