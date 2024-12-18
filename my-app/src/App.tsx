@@ -1,12 +1,25 @@
-import React from 'react';
+import {useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  const handlelog = () => {
-    console.log(5);
+
+  const nameList = ['test', 'test1'];
+  const nameObj = {
+    name: 'hello',
+    old: 23,
+    email:'hieutran@gmail.com'
+  }
+
+  const [name, setName] = useState('HieuTran1')
+
+  const handleChangeName = () => {
+    setName ('HieuTran2')
     
   }
+
+  console.log("render");
+  
   return (
     <div className="App">
       <header className="App-header">
@@ -22,7 +35,12 @@ function App() {
         >
           Learn React
         </a>
-        <button onClick={handlelog}></button>
+        <div>{name}</div>
+        <div>{nameList}</div>
+        <div>{nameObj.name}</div>
+        <div>{nameObj.old}</div>
+        <div>{nameObj.email}</div>
+        <button onClick={handleChangeName}>Change name</button>
       </header>
     </div>
   );
